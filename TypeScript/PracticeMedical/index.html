@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="CSS/stylesheet.css">
+</head>
+
+<body>
+    <div id="page">
+        <div id="home">
+            <div>
+                <h1>Online Medical Store</h1>
+                <button onclick="SignUpPage()">Sign up</button>
+                <button onclick="SignInPage()">Sign in</button>
+            </div>
+        </div>
+        <div id="signup">
+            <h2>Sign Up</h2>
+            <div id="signupDatas">
+                <label for="signupEmail">Email</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" name="email" id="signupEmail" onkeyup="CheckNewUserEmail('signupEmail')">&nbsp;&nbsp;<label for="signupEmail" id="signupEmailMessage"></label><br><br>
+                <label for="signupPassword">Password</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" name="password" id="signupPassword" onkeyup="CheckNewUserPassword('signupPassword')">&nbsp;&nbsp;<label for="signupPassword" id="signupPasswordMessage"></label><br><br>
+                <label for="signupConfirmPassword">Confirm Password</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" name="confirmPassword" id="signupConfirmPassword" onkeyup="CheckNewUserConfirmPassword('signupConfirmPassword')">&nbsp;&nbsp;<label for="signupConfirmPassword" id="signupConfirmPasswordMessage"></label><br><br>
+                <button type="submit" onclick="SignUp()">Sign Up</button>
+                <button type="submit" onclick="Back('signup')">Back</button>
+            </div>
+        </div>
+        <div id="signin">
+            <h2>Sign In</h2>
+            <div id="signinDatas">
+                <label for="signinEmail">Email</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" name="email" id="signinEmail" onkeyup="CheckNewUserEmail('signinEmail')">&nbsp;&nbsp;<label for="signinEmail" id="signinEmailMessage"></label><br><br>
+                <label for="signinPassword">Password</label>&nbsp;&nbsp;&nbsp;
+                <input type="password" name="password" id="signinPassword" onkeyup="CheckNewUserPassword('signinPassword')">&nbsp;&nbsp;<label for="signinPassword" id="signinPasswordMessage"></label><br><br>
+                <button type="submit" onclick="SignIn()">Sign in</button>
+                <button type="submit" onclick="Back('signin')">Back</button>
+            </div>
+        </div>
+    </div>
+    <div id="homePage">
+        <div id="loggedIn">
+            <div>
+                <button>Home <br> Welcome<span id="greet"></span></button>
+                <button onclick="MedicineDetails()">Medicine Details</button>
+                <button onclick="Purchase()">Purchase</button>
+                <button onclick="Cancel()">Cancel</button>
+                <button onclick="OrderHistory()">Order History</button>
+                <button onclick="WalletRecharge()">Wallet Recharge</button>
+                <button onclick="ShowBalance()">Show Balance</button>
+            </div>
+            <div id="medicines">
+                <table border="2px" id="medicineDetails">
+                    <tr>
+                        <td class="row1"></td>
+                        <td class="row1"></td>
+                        <td class="row1"></td>
+                        <td class="row1"></td>
+                        <td class="row1"></td>
+                    </tr>
+                    <tr>
+                        <td class="row2"></td>
+                        <td class="row2"></td>
+                        <td class="row2"></td>
+                        <td class="row2"></td>
+                        <td class="row2"></td>
+                    </tr>
+                    <tr>
+                        <td class="row3"></td>
+                        <td class="row3"></td>
+                        <td class="row3"></td>
+                        <td class="row3"></td>
+                        <td class="row3"></td>
+                    </tr>
+                    <tr>
+                        <td class="row4"></td>
+                        <td class="row4"></td>
+                        <td class="row4"></td>
+                        <td class="row4"></td>
+                        <td class="row4"></td>
+                    </tr>
+                    <tr>
+                        <td class="row5"></td>
+                        <td class="row5"></td>
+                        <td class="row5"></td>
+                        <td class="row5"></td>
+                        <td class="row5"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="purchase">
+                <label for="medicineId">Enter Medicine ID </label>
+                <input type="text" id="medicineId" onkeyup="CheckMedicineID('medicineId')"><label for="medicineId" id="medicineIdMessage"></label><br><br>
+                <label for="count">Required Count</label>
+                <input type="number" id="count" onkeyup="CheckRequiredCount('count')"><label for="count" id="countMessage"></label><br><br>
+            </div>
+        </div>
+    </div>
+    <script src="JS/medicalstore.js"></script>
+</body>
+
+</html>
