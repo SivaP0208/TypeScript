@@ -20,12 +20,21 @@
         <div id="signup">
             <h2>Sign Up</h2>
             <div id="signupDatas">
+                <label for="userName">UserName</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" name="userName" id="userName" onkeyup="CheckNewUserName('userName')">
+                &nbsp;&nbsp;<label for="userName" id="userNameMessage"></label><br><br>
                 <label for="signupEmail">Email</label>&nbsp;&nbsp;&nbsp;
-                <input type="text" name="email" id="signupEmail" onkeyup="CheckNewUserEmail('signupEmail')">&nbsp;&nbsp;<label for="signupEmail" id="signupEmailMessage"></label><br><br>
+                <input type="text" name="email" id="signupEmail"
+                    onkeyup="CheckNewUserEmail('signupEmail')">&nbsp;&nbsp;<label for="signupEmail"
+                    id="signupEmailMessage"></label><br><br>
                 <label for="signupPassword">Password</label>&nbsp;&nbsp;&nbsp;
-                <input type="text" name="password" id="signupPassword" onkeyup="CheckNewUserPassword('signupPassword')">&nbsp;&nbsp;<label for="signupPassword" id="signupPasswordMessage"></label><br><br>
+                <input type="text" name="password" id="signupPassword"
+                    onkeyup="CheckNewUserPassword('signupPassword')">&nbsp;&nbsp;<label for="signupPassword"
+                    id="signupPasswordMessage"></label><br><br>
                 <label for="signupConfirmPassword">Confirm Password</label>&nbsp;&nbsp;&nbsp;
-                <input type="text" name="confirmPassword" id="signupConfirmPassword" onkeyup="CheckNewUserConfirmPassword('signupConfirmPassword')">&nbsp;&nbsp;<label for="signupConfirmPassword" id="signupConfirmPasswordMessage"></label><br><br>
+                <input type="text" name="confirmPassword" id="signupConfirmPassword"
+                    onkeyup="CheckNewUserConfirmPassword('signupConfirmPassword')">&nbsp;&nbsp;<label
+                    for="signupConfirmPassword" id="signupConfirmPasswordMessage"></label><br><br>
                 <button type="submit" onclick="SignUp()">Sign Up</button>
                 <button type="submit" onclick="Back('signup')">Back</button>
             </div>
@@ -34,9 +43,13 @@
             <h2>Sign In</h2>
             <div id="signinDatas">
                 <label for="signinEmail">Email</label>&nbsp;&nbsp;&nbsp;
-                <input type="text" name="email" id="signinEmail" onkeyup="CheckNewUserEmail('signinEmail')">&nbsp;&nbsp;<label for="signinEmail" id="signinEmailMessage"></label><br><br>
+                <input type="text" name="email" id="signinEmail"
+                    onkeyup="CheckNewUserEmail('signinEmail')">&nbsp;&nbsp;<label for="signinEmail"
+                    id="signinEmailMessage"></label><br><br>
                 <label for="signinPassword">Password</label>&nbsp;&nbsp;&nbsp;
-                <input type="password" name="password" id="signinPassword" onkeyup="CheckNewUserPassword('signinPassword')">&nbsp;&nbsp;<label for="signinPassword" id="signinPasswordMessage"></label><br><br>
+                <input type="password" name="password" id="signinPassword"
+                    onkeyup="CheckNewUserPassword('signinPassword')">&nbsp;&nbsp;<label for="signinPassword"
+                    id="signinPasswordMessage"></label><br><br>
                 <button type="submit" onclick="SignIn()">Sign in</button>
                 <button type="submit" onclick="Back('signin')">Back</button>
             </div>
@@ -44,60 +57,47 @@
     </div>
     <div id="homePage">
         <div id="loggedIn">
-            <div>
-                <button>Home <br> Welcome<span id="greet"></span></button>
+            <div id="topNavBar">
+                <button onclick="WelcomePage()">Home</button>
                 <button onclick="MedicineDetails()">Medicine Details</button>
-                <button onclick="Purchase()">Purchase</button>
-                <button onclick="Cancel()">Cancel</button>
-                <button onclick="OrderHistory()">Order History</button>
-                <button onclick="WalletRecharge()">Wallet Recharge</button>
+                <button onclick="PurchasePage()">Purchase</button>
+                <button onclick="CancelOrderPage()">Cancel</button>
+                <button onclick="OrderHistoryPage()">Order History</button>
+                <button onclick="WalletRechargePage()">Wallet Recharge</button>
                 <button onclick="ShowBalance()">Show Balance</button>
             </div>
-            <div id="medicines">
-                <table border="2px" id="medicineDetails">
-                    <tr>
-                        <td class="row1"></td>
-                        <td class="row1"></td>
-                        <td class="row1"></td>
-                        <td class="row1"></td>
-                        <td class="row1"></td>
-                    </tr>
-                    <tr>
-                        <td class="row2"></td>
-                        <td class="row2"></td>
-                        <td class="row2"></td>
-                        <td class="row2"></td>
-                        <td class="row2"></td>
-                    </tr>
-                    <tr>
-                        <td class="row3"></td>
-                        <td class="row3"></td>
-                        <td class="row3"></td>
-                        <td class="row3"></td>
-                        <td class="row3"></td>
-                    </tr>
-                    <tr>
-                        <td class="row4"></td>
-                        <td class="row4"></td>
-                        <td class="row4"></td>
-                        <td class="row4"></td>
-                        <td class="row4"></td>
-                    </tr>
-                    <tr>
-                        <td class="row5"></td>
-                        <td class="row5"></td>
-                        <td class="row5"></td>
-                        <td class="row5"></td>
-                        <td class="row5"></td>
-                    </tr>
-                </table>
+            <div id="welcome"></div>
+            <div id="editDiv">
+                <label for="">To Add or Edit Medicine fill out this form</label><br><br>
+                <label for="medicineName">Medicine Name</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" name="medicineName" id="medicineName" placeholder="Enter Medicine Name">&nbsp;&nbsp;
+                <label for="availableCount">Available Count</label>&nbsp;&nbsp;&nbsp;
+                <input type="number" name="availableCount" id="availableCount" placeholder="Enter Available count">&nbsp;&nbsp;
+                <label for="price">Price</label>&nbsp;&nbsp;&nbsp;
+                <input type="number" name="price" id="price" placeholder="Enter Price">&nbsp;&nbsp;
+                <label for="expiryDate">Expiry Date</label>&nbsp;&nbsp;&nbsp;
+                <input type="date" name="expiryDate" id="expiryDate"><br>
+                <div id="editButton"></div>
             </div>
+            <div id="medicinesDiv"></div>
             <div id="purchase">
-                <label for="medicineId">Enter Medicine ID </label>
-                <input type="text" id="medicineId" onkeyup="CheckMedicineID('medicineId')"><label for="medicineId" id="medicineIdMessage"></label><br><br>
-                <label for="count">Required Count</label>
-                <input type="number" id="count" onkeyup="CheckRequiredCount('count')"><label for="count" id="countMessage"></label><br><br>
+                <div id="purchaseDetails"></div>
+                <div id="requiredCount">
+                    <label for="count">Required Count</label>
+                    <input type="number" id="count" onkeyup="CheckCount()">&nbsp;&nbsp;&nbsp;<label for="count"
+                        id="countMessage"></label><br><br>
+                    <div id="purchaseButton"></div>
+                </div>
             </div>
+            <div id="walletRechargePage">
+                <label for="amount">Enter the Amount to Recharge</label>&nbsp;&nbsp;
+                <input type="text" name="amount" id="amount"><br>
+                <button onclick="WalletRecharge()">Recharge</button>
+                <div id="walletRechargeMessage"></div>
+            </div>
+            <div id="showWalletBalance"></div>
+            <div id="orderHistoryPage"></div>
+            <div id="cancelOrderPage"></div>
         </div>
     </div>
     <script src="JS/medicalstore.js"></script>

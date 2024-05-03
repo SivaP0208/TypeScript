@@ -107,42 +107,91 @@
     height: 100%;
     /* border: 1px solid black; */
 }
-#loggedIn div:not(#medicines){
-    width: 100%;
-    height: 10%;
-    display: flex;
-}
-#loggedIn button{
-    background-color: white;
-    width: 20%;
+#topNavBar button{
+    background-color: rgb(255, 89, 0);
+    width: 13%;
+    height: 2em;
+    color: whitesmoke;
     font-size: 20px;
     margin: .3em;
-    border-radius: 10px;
     vertical-align: middle;
     text-align: center;
-    border: 1px solid black;
+    border: none;
 }
-#greet{
-    text-align: center;
-    line-height: 1.5;
+#welcome{
+    margin-top: 17em;
 }
 
 #medicineDetails
 {
-    display: none;
-    margin: 2em;
+    margin: 1em 5em;
+    width: fit-content;
 }
 #medicineDetails tr td{
+    width: 10%;
+    height: 5em;
+    text-align: center;
+}
+#medicineDetails tr th{
     width: 15%;
     height: 5em;
     text-align: center;
 }
 #medicineDetails button{
-    width:80%;
-    height: 2em;
+    width:50%;
+    height: 1.5em;
 }
 
-#purchase{
-    display: none;
+#purchaseDetails
+{
+    margin: 2em 5em;
 }
-
+#purchaseDetails tr td{
+    width: 10%;
+    height: 5em;
+    text-align: center;
+}
+#purchaseDetails tr th{
+    width: 15%;
+    height: 5em;
+    text-align: center;
+}
+#purchaseDetails button{
+    width:50%;
+    height: 1.5em;
+}
+#requiredCount input{
+    height: 2rem;
+    padding: 0em 2em;
+}
+#requiredCount button{
+    width: 10%;
+}
+#walletRechargePage{
+    position: relative;
+    top: 10rem;
+    left: 10rem;
+    font-size: 25px;
+}
+#walletRechargePage input{
+    height: 2rem;
+    padding: 0em 2em;
+}
+#walletRechargePage button{
+    width: 10%;
+    position: relative;
+    top: 2rem;
+}
+#showWalletBalance{
+    position: relative;
+    top: 10rem;
+    text-align: center;
+}
+#orderHistoryPage{
+    margin: 5em;
+    font-size: 20px;
+}
+#cancelOrderPage{
+    margin: 5em;
+    font-size: 20px;
+}
