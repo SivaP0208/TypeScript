@@ -1,0 +1,250 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+body div:not(:first-child) {
+    display: none;
+}
+table{
+    width: 60%;
+    text-align: center;
+    margin-left: 10em;
+}
+table button{
+    margin-top: .5em;
+}
+#indexPage{
+    margin-top: 9em;
+    text-align: center;
+    font-size: 30px;
+    color: rgba(9, 9, 118, 0.808);
+    text-shadow: 0px 4px 4px rgba(40, 40, 188, 0.571) ;
+}
+
+#indexPage button{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 8em;
+    border-radius: 15px;
+    padding: .7em;
+    color: red;
+    font-weight: 700;
+    margin-right: 2em;
+    cursor: pointer;
+}
+
+#indexPage button:hover{
+    box-shadow: 2px 2px 5px red;
+}
+#signUpPage h1{
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-size: 4em;
+    color: rgba(9, 9, 118, 0.808);
+    text-shadow: 0px 4px 4px rgba(40, 40, 188, 0.571) ;
+}
+#signUpPage table{
+    margin-left: 15em;
+    line-height: 2em;
+    font-size: 2em;
+    text-align: left;
+    width: 65%;
+}
+#signUpPage th{
+    width: 28%;
+}
+#signUpPage input{
+    vertical-align: middle;
+    width: 13em;
+    height: 1.5em;
+    padding-left: 1em;
+    font-size: 20px;
+}
+#signUpPage button{
+    width: 8em;
+    height: 2em;
+    font-size: 20px;
+    margin: 1.5em;
+    color: red;
+    font-weight: 700;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#signUpPage button:hover{
+    box-shadow: 2px 2px 5px rgb(0, 252, 17);
+}
+#loginPage h1{
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-size: 4em;
+    color: rgba(9, 118, 13, 0.808);
+    text-shadow: 0px 4px 4px rgba(40, 40, 188, 0.571) ;
+}
+#loginPage table{
+    margin-left: 15em;
+    line-height: 2em;
+    font-size: 2em;
+    text-align: left;
+    width: 65%;
+}
+#loginPage th{
+    width: 28%;
+}
+#loginPage input{
+    vertical-align: middle;
+    width: 13em;
+    height: 1.5em;
+    padding-left: 1em;
+    font-size: 20px;
+}
+#loginPage button{
+    width: 8em;
+    height: 2em;
+    font-size: 20px;
+    margin: 1.5em;
+    color: red;
+    font-weight: 700;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#loginPage button:hover{
+    box-shadow: 2px 2px 5px rgb(0, 98, 255);
+}
+#homePage{
+    padding-left:4em;
+    padding-top: 2em;
+}
+#homePage button{
+    width: 9em;
+    font-size: 20px;
+    margin-right: 1em;
+    height: 2em;
+    border: none;
+    background-color: rgb(0, 204, 255);
+    font-weight: 500;
+    cursor: pointer;
+}
+#homePage button:hover{
+    background-color: black;
+    color: aqua;
+}
+#greet{
+    text-align: center;
+    margin-top: 4em;
+    font-size: 4rem;
+    color: rgba(95, 4, 4, 0.86);
+}
+#ticketFairPage h1{
+    margin-top: 2em;
+    text-align: center;
+}
+#ticketFairPage table{
+    width: 40%;
+    align-content: center;
+    font-size: 1.5em;
+    margin-left: 19em;
+    margin-top: 2em;
+}
+#travelPage h1{
+    margin-top: 2em;
+    text-align: center;
+}
+#travelPage table{
+    width: 60%;
+    align-content: center;
+    font-size: 1.5em;
+    margin-left: 13em;
+}
+#travelPage table button{
+    width: 7em;
+    padding: .3em;
+    background-color: orange;
+    color: whitesmoke;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+#travelPage table button:hover{
+    background-color: black;
+    color: orange;
+}
+#cancelPage h1{
+    margin-top: 1.5em;
+    text-align: center;
+}
+#cancelPage table{
+    width: 70%;
+    align-content: center;
+    font-size: 1.5em;
+    margin-left: 10em;
+    margin-top: 1em;
+}
+#cancelPage table button{
+    width: 6em;
+    padding: .3em;
+    background-color: red;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+#cancelPage table button:hover{
+    background-color: black;
+    color: red;
+}
+#travelHistoryPage h1{
+    margin-top: 1.5em;
+    text-align: center;
+}
+#travelHistoryPage table{
+    width: 70%;
+    align-content: center;
+    font-size: 1.5em;
+    margin-left: 10em;
+    margin-top: 1em;
+}
+
+#walletRechargePage{
+    font-size: 2em;
+    font-weight: 600;
+}
+#walletRechargePage input{
+    width: 9em;
+    font-size: .7em;
+    font-weight: 500;
+    padding: .2em ;
+    padding-left: .9em;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#walletRechargePage button{
+    width: 11em;
+    padding: 1em;
+    margin-top: 3em;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: rgb(4, 110, 105);
+    color: rgb(212, 255, 0);
+    cursor: pointer;
+}
+#walletRechargePage button:hover{
+    background-color: black;
+    color: yellow;
+}
+#rechargeMessage{
+    color: crimson;
+    font-size: 1.5rem;
+}
+#showBalancePage{
+    font-size: 1.5rem;
+    color: rgba(17, 2, 57, 0.903);
+}

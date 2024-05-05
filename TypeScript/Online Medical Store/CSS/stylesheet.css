@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#home{
+    width: 70%;
+    height: 80%;
+    font-size: 30px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: block;
+    place-content: center;
+    box-shadow: 4px 4px 10px gray;
+}
+#home button{
+    width: 15%;
+    height: 10%;
+    text-align: center;
+    font-size: 20px;
+    margin: 2em;
+    float: right;
+    color: red;
+    font-weight: 600;
+    padding: .5em;
+    border-radius: 10px;
+}
+#signup{
+    width: 70%;
+    height: 80%;
+    font-size: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 4px 4px 10px gray;
+}
+#signupDatas input{
+    width: 40%;
+    height: 1.8em;
+    vertical-align: middle;
+}
+#signupDatas button{
+    width: 20%;
+    height: 10%;
+    text-align: center;
+    font-size: 20px;
+    margin: 2em;
+    color: red;
+    font-weight: 600;
+    padding: .5em;
+    border-radius: 10px;
+}
+#signup h2{
+    text-align: center;
+    margin: 1.5em;
+}
+#signup div{
+    margin: 2em 4em;
+}
+#signin{
+    width: 70%;
+    height: 80%;
+    font-size: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: none;
+    box-shadow: 4px 4px 10px gray;
+}
+#signin h2{
+    text-align: center;
+    margin: 1.5em;
+}
+#signin div{
+    margin: 2em 4em;
+}
+#signinDatas input{
+    width: 40%;
+    height: 1.8em;
+    vertical-align: middle;
+}
+#signinDatas button{
+    width: 25%;
+    height: 10%;
+    text-align: center;
+    font-size: 20px;
+    margin: 2em;
+    color: red;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 1rem;
+}
+#homePage{
+    width: 100%;
+    height: 95vh;
+    display: none;
+}
+#loggedIn{
+    margin: 1em 2em;
+    width: 96%;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+#topNavBar button{
+    background-color: rgb(255, 89, 0);
+    width: 13%;
+    height: 2em;
+    color: whitesmoke;
+    font-size: 20px;
+    margin: .3em;
+    vertical-align: middle;
+    text-align: center;
+    border: none;
+}
+#welcome{
+    margin-top: 17em;
+}
+
+#medicineDetails
+{
+    margin: 1em 5em;
+    width: fit-content;
+}
+#medicineDetails tr td{
+    width: 10%;
+    height: 5em;
+    text-align: center;
+}
+#medicineDetails tr th{
+    width: 15%;
+    height: 5em;
+    text-align: center;
+}
+#medicineDetails button{
+    width:50%;
+    height: 1.5em;
+}
+
+#purchaseDetails
+{
+    margin: 2em 5em;
+}
+#purchaseDetails tr td{
+    width: 10%;
+    height: 5em;
+    text-align: center;
+}
+#purchaseDetails tr th{
+    width: 15%;
+    height: 5em;
+    text-align: center;
+}
+#purchaseDetails button{
+    width:50%;
+    height: 1.5em;
+}
+#requiredCount input{
+    height: 2rem;
+    padding: 0em 2em;
+}
+#requiredCount button{
+    width: 10%;
+}
+#walletRechargePage{
+    position: relative;
+    top: 10rem;
+    left: 10rem;
+    font-size: 25px;
+}
+#walletRechargePage input{
+    height: 2rem;
+    padding: 0em 2em;
+}
+#walletRechargePage button{
+    width: 10%;
+    position: relative;
+    top: 2rem;
+}
+#showWalletBalance{
+    position: relative;
+    top: 10rem;
+    text-align: center;
+}
+#orderHistoryPage{
+    margin: 5em;
+    font-size: 20px;
+}
+#cancelOrderPage{
+    margin: 5em;
+    font-size: 20px;
+}

@@ -3,81 +3,104 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Medical Store</title>
-
-    <link rel="stylesheet" href="StyleSheet/medicalStore.css">
-
+    <title>Home</title>
+    <link rel="stylesheet" href="CSS/stylesheet.css">
 </head>
 
 <body>
-
-    <div id="homePage">
-        <h2>Home</h2>
-        <button type="button" onclick="newUserPage()">New User</button>
-        <button type="button" onclick="existingUserPage()">Existing User</button>
-
-
-    </div>
-
-    <div id="newUserPage">
-
-        <h3>Sign Up Page</h3>
-        <label> User Name : </label><br><input type="text" id="newUserName" onkeyup="checkNewUserName('newUserName')"><label
-            id="newUserNameMessage"></label><br>
-        <label> User Age : </label><br><input type="number" id="newUserAge" onkeyup="checkNewUserAge('newUserAge')"><label
-            id="newUserAgeMessage"></label><br>
-        <label> User Phone Number : </label><br><input type="number" id="newUserPhoneNumber"
-            onkeyup="checkNewUserPhoneNumber('newUserPhoneNumber')"><label id="newUserPhoneNumberMessage"></label><br>
-
-        <button onclick="signUp()">Sign Up</button>
-    </div>
-
-    <div id="existingUserPage">
-
-        <h3>Sign In Page</h3>
-        <label>User ID</label>
-        <input type="text" id="existingUserId">
-        <button type="button" onclick="signIn()">Sign In</button><br>
-        <label id="availableUser"></label>
-
-    </div>
-
-    <div id="medicinePage">
-
-        <h2>Medicine Page</h2>
-
-        <label id="greet"></label><button onclick="displayHomePage()">Go Home</button><br>
-
-        <button onclick="showHistory()">Show History</button><br>
-
-        <label id="historyDisplay"></label>
-        <br>
-        <h3>Want to Buy a Medicine?</h3>
-        <select name="medicineList" id="medicineList" onchange="medicineListCheck()">
-
-            <option value="Paracetomol">Paracetomol</option>
-            <option value="Colpal">Colpal</option>
-            <option value="Stepsil">Stepsil</option>
-            <option value="Iodex">Iodex</option>
-            <option value="Acetherol">Acetherol</option>
-        </select>
-
-        <button onclick="medicineListCheck()">Check</button><br>
-        <br>
-        <label id="medicineInfo"></label>
-
-        <br><br>
-        <div id="requiredCount">
-            <label>Required Count </label><input type="number" id="medicineRequiredCount"><button
-                onclick="buyMedicine()">Buy</button>
-
+    <div id="page">
+        <div id="home">
+            <div>
+                <h1>Online Medical Store</h1>
+                <button onclick="SignUpPage()">Sign up</button>
+                <button onclick="SignInPage()">Sign in</button>
+            </div>
         </div>
-
+        <div id="signup">
+            <h2>Sign Up</h2>
+            <div id="signupDatas">
+                <label for="userName">UserName</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" name="userName" id="userName" onkeyup="CheckNewUserName('userName')">
+                &nbsp;&nbsp;<label for="userName" id="userNameMessage"></label><br><br>
+                <label for="signupEmail">Email</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" name="email" id="signupEmail"
+                    onkeyup="CheckNewUserEmail('signupEmail')">&nbsp;&nbsp;<label for="signupEmail"
+                    id="signupEmailMessage"></label><br><br>
+                <label for="signupPassword">Password</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" name="password" id="signupPassword"
+                    onkeyup="CheckNewUserPassword('signupPassword')">&nbsp;&nbsp;<label for="signupPassword"
+                    id="signupPasswordMessage"></label><br><br>
+                <label for="signupConfirmPassword">Confirm Password</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" name="confirmPassword" id="signupConfirmPassword"
+                    onkeyup="CheckNewUserConfirmPassword('signupConfirmPassword')">&nbsp;&nbsp;<label
+                    for="signupConfirmPassword" id="signupConfirmPasswordMessage"></label><br><br>
+                <button type="submit" onclick="SignUp()">Sign Up</button>
+                <button type="submit" onclick="Back('signup')">Back</button>
+            </div>
+        </div>
+        <div id="signin">
+            <h2>Sign In</h2>
+            <div id="signinDatas">
+                <label for="signinEmail">Email</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" name="email" id="signinEmail"
+                    onkeyup="CheckNewUserEmail('signinEmail')">&nbsp;&nbsp;<label for="signinEmail"
+                    id="signinEmailMessage"></label><br><br>
+                <label for="signinPassword">Password</label>&nbsp;&nbsp;&nbsp;
+                <input type="password" name="password" id="signinPassword"
+                    onkeyup="CheckNewUserPassword('signinPassword')">&nbsp;&nbsp;<label for="signinPassword"
+                    id="signinPasswordMessage"></label><br><br>
+                <button type="submit" onclick="SignIn()">Sign in</button>
+                <button type="submit" onclick="Back('signin')">Back</button>
+            </div>
+        </div>
     </div>
+    <div id="homePage">
+        <div id="loggedIn">
+            <div id="topNavBar">
+                <button onclick="WelcomePage()">Home</button>
+                <button onclick="MedicineDetails()">Medicine Details</button>
+                <button onclick="PurchasePage()">Purchase</button>
+                <button onclick="CancelOrderPage()">Cancel</button>
+                <button onclick="OrderHistoryPage()">Order History</button>
+                <button onclick="WalletRechargePage()">Wallet Recharge</button>
+                <button onclick="ShowBalance()">Show Balance</button>
+            </div>
+            <div id="welcome"></div>
+            <div id="editDiv">
+                <label for="">To Add or Edit Medicine fill out this form</label><br><br>
+                <label for="medicineName">Medicine Name</label>&nbsp;&nbsp;&nbsp;
+                <input type="text" name="medicineName" id="medicineName" placeholder="Enter Medicine Name">&nbsp;&nbsp;
+                <label for="availableCount">Available Count</label>&nbsp;&nbsp;&nbsp;
+                <input type="number" name="availableCount" id="availableCount" placeholder="Enter Available count">&nbsp;&nbsp;
+                <label for="price">Price</label>&nbsp;&nbsp;&nbsp;
+                <input type="number" name="price" id="price" placeholder="Enter Price">&nbsp;&nbsp;
+                <label for="expiryDate">Expiry Date</label>&nbsp;&nbsp;&nbsp;
+                <input type="date" name="expiryDate" id="expiryDate"><br>
+                <div id="editButton"></div>
+            </div>
+            <div id="medicinesDiv"></div>
+            <div id="purchase">
+                <div id="purchaseDetails"></div>
+                <div id="requiredCount">
+                    <label for="count">Required Count</label>
+                    <input type="number" id="count" onkeyup="CheckCount()">&nbsp;&nbsp;&nbsp;<label for="count"
+                        id="countMessage"></label><br><br>
+                    <div id="purchaseButton"></div>
+                </div>
+            </div>
+            <div id="walletRechargePage">
+                <label for="amount">Enter the Amount to Recharge</label>&nbsp;&nbsp;
+                <input type="text" name="amount" id="amount"><br>
+                <button onclick="WalletRecharge()">Recharge</button>
+                <div id="walletRechargeMessage"></div>
+            </div>
+            <div id="showWalletBalance"></div>
+            <div id="orderHistoryPage"></div>
+            <div id="cancelOrderPage"></div>
+        </div>
+    </div>
+    <script src="JS/medicalstore.js"></script>
 </body>
-
-<script type="text/JavaScript" src="TypeScript/medicalStore.js"></script>
 
 </html>
